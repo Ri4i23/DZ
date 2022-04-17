@@ -1,13 +1,16 @@
-﻿int number = RandomInt(100,1000);
+﻿int number = RandomInt(10,1001);
 Console.WriteLine(number);
 string stringNumber = Convert.ToString(number);
-Console.WriteLine($"{stringNumber[1]}");
+if (number%100 == number)
+{
+    Console.WriteLine("ТРЕТЬЕЙ ЦИФРЫ НЕТ!!!");
+}
+Console.WriteLine($"{stringNumber[2]}");
 
 int RandomInt(int enclusiveMin,int exclusiveMax)
 {
     return new Random().Next(enclusiveMin,exclusiveMax);
 }
-    
 
 
 
